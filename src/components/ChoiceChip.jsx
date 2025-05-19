@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useState , useEffect } from "react";
 
-export const SingleChoiceChip = ({ options, onChange }) => {
-  const [selected, setSelected] = useState(null);
+export const SingleChoiceChip = ({ options, value, onChange }) => {
+  const [selected, setSelected] = useState(value || null);
+
+  useEffect(() => {
+    setSelected(value);
+  }, [value]);
 
   return (
     <div className="flex gap-2 flex-wrap">
       {options.map((option, idx) => (
         <button
+          type="button"
           key={idx}
           onClick={() => {
             setSelected(option);

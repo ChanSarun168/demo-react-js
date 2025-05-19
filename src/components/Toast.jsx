@@ -15,7 +15,7 @@ export const ToastProvider = ({ children }) => {
     <ToastContext.Provider value={{ showToast }}>
       {children}
       {toast.visible && (
-        <div className="fixed bottom-5 right-5 bg-green-600 text-white px-4 py-2 rounded shadow z-50">
+        <div className="fixed top-5 right-5 bg-green-600 text-white px-4 py-2 rounded shadow z-50">
           {toast.message}
         </div>
       )}

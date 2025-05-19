@@ -6,9 +6,9 @@ import { ToastProvider, useToast } from "./components/Toast";
 import Dropdown from "./components/Dropdown";
 import AppLayout from "./components/layout/AppLayout"
 import Home from "./components/page/Home"
+import Category from "./components/page/Category"
 
 
-const Category = () => <h2 className="text-xl font-semibold">Profile Page</h2>;
 const Product = () => <h2 className="text-xl font-semibold">Settings Page</h2>;
 
 function App() {
